@@ -1,0 +1,25 @@
+Source: python-cligj
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: Johan Van de Wauw <johan.vandewauw@gmail.com>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 10~),
+               dh-python,
+               python3-all,
+               python3-click,
+               python3-setuptools,
+               python3-pytest,
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/debian-gis-team/python-cligj
+Vcs-Git: https://salsa.debian.org/debian-gis-team/python-cligj.git
+Homepage: https://github.com/mapbox/cligj
+
+Package: python3-cligj
+Architecture: all
+Depends: ${python3:Depends},
+         ${misc:Depends}
+Description: Python 3 library for processing GeoJSON commands
+ Cligj is a small library which can be used to standardise processing
+ of geoJSON in Python command line programs.
+ .
+ This package provides the Python 3 version of the library.

@@ -1,0 +1,19 @@
+sudo: false
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+install:
+  - "pip install coveralls"
+  - "pip install -e .[test]"
+script: 
+  - py.test --cov cligj --cov-report term-missing
+after_success:
+  - coveralls
+deploy:
+  on:
+    tags: true
+  provider: pypi
+  distributions: "sdist bdist_wheel"
+  user: __token__
